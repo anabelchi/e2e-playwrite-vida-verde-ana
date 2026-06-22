@@ -5,7 +5,7 @@ from playwright.sync_api import Page, expect
 
 def test_ver_produtos_y_detalles(page: Page):
     print("Given el usuario abre la página de productos 'https://web-qa.dev.adalab.es/products'")
-    page.goto("https://web-qa.dev.adalab.es/products/")
+    page.goto("https://web-qa.dev.adalab.es/products")
 
     print("Then el usuario debe ver el título 'Catálogo de Productos'")
     expect(page.get_by_role("heading", name="Catálogo de Productos")).to_be_visible()

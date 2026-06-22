@@ -5,7 +5,7 @@ from playwright.sync_api import Page, expect
 
 def test_filtrar_con_resultados(page: Page):
     print("Given el usuario abre la página de productos 'https://web-qa.dev.adalab.es/products'")
-    page.goto("https://web-qa.dev.adalab.es/products/")
+    page.goto("https://web-qa.dev.adalab.es/products")
 
     print("When filtra por nombre 'Sanse'")
     # Escribe Sanse en la caja Nombre
@@ -36,7 +36,7 @@ def test_filtrar_con_resultados(page: Page):
 
 def test_filtrar_sin_resultado(page: Page):
     print("Given la usuaria visita la página de productos 'https://web-qa.dev.adalab.es/products'")
-    page.goto("https://web-qa.dev.adalab.es/products/")
+    page.goto("https://web-qa.dev.adalab.es/products")
 
     print("When filtra por nombre no existente “Test”")
     page.get_by_role("searchbox", name="Nombre").fill("test")
