@@ -13,7 +13,7 @@ def test_filtrar_con_resultados(page: Page):
 
     print("And filtra por categoria 'Plantas'")
     # Selecciona la categoría Plantas
-    page.get_by_label("CategoríaTodas las categorí").select_option("Plantas")
+    page.get_by_label("Categoría").select_option("Plantas")
 
     print("And filtra por precio minimo '10'")
     # Precio mínimo 10€
@@ -29,7 +29,7 @@ def test_filtrar_con_resultados(page: Page):
     expect(page.get_by_role("article").get_by_text("Plantas")).to_be_visible()
 
     print("And debe ver el precio 22'")
-    expect(page.get_by_text("€")).to_be_visible()
+    expect(page.get_by_text("22.00 €")).to_be_visible()
 
 # Definimos una función que filtre por nombre de producto sin resultado
 
