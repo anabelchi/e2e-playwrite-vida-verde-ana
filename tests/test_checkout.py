@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from pages.carrito_page import CarritoPage
+from pages.cart_page import CarritoPage
 from pages.checkout_page import CheckoutPage
 from pages.confirmacion_page import ConfirmacionPage
 from pages.inicio_page import InicioPage
