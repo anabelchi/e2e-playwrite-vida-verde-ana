@@ -1,5 +1,7 @@
 from playwright.sync_api import Page
 
+# comentario
+
 
 class CarritoPage:
 
