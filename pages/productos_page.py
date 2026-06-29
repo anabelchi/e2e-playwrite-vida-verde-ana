@@ -41,3 +41,10 @@ class ProductosPage:
     def filtrar_por_precio_maximo(self, precio_maximo):
         self.page.get_by_role(
             "spinbutton", name="Precio máximo").fill(precio_maximo)
+
+    def agregar_al_carrito(self):
+        self.page.get_by_role(
+            "button", name="Añadir Juego de Palas al").click()
+
+    def finalizar_compra(self):
+        self.page.get_by_role("link", name="Finalizar Compra").click()
