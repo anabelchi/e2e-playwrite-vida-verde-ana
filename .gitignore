@@ -1,4 +1,4 @@
-
+pages/__pycache__/*
 tests/__pycache__/*
 test-results/*
 .pytest_cache
