@@ -1,6 +1,7 @@
 from playwright.sync_api import Page
 from pages.cart_page import CarritoPage
 from pages.checkout_page import CheckoutPage
+from pages.components.menu import MenuComponent
 from pages.confirmacion_page import ConfirmacionPage
 from pages.inicio_page import InicioPage
 from pages.productos_page import ProductosPage
@@ -13,6 +14,7 @@ def test_realizar_compra_datos_validos(page: Page):
     checkout_page = CheckoutPage(page)
     confirmacion_page = ConfirmacionPage(page)
     inicio_page = InicioPage(page)
+    menu_component = MenuComponent(page)
 
     print("Given la usuaria esta en la página de productos 'https://web-qa.dev.adalab.es/products'")
     productos_page.visitar_productos()
@@ -24,7 +26,7 @@ def test_realizar_compra_datos_validos(page: Page):
     productos_page.agregar_al_carrito()
 
     print("and hace clic en finalizar compra")
-    productos_page.finalizar_compra()
+    menu_component.clic_finalizar_compra()
 
     print("and hace clic en 'Proceder al pago'")
     carrito_page.proceder_al_pago()
